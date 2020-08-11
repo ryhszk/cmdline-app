@@ -1,4 +1,5 @@
-/*
+/* like the grep */
+/* 
 use structopt::StructOpt;
 
 /// Search for a pattern in a file and display the lines that contain it.
@@ -23,6 +24,8 @@ fn main() {
 }
 */
 
+/* Error Report */
+/*
 use failure::ResultExt;
 use exitfailure::ExitFailure;
 
@@ -32,6 +35,22 @@ fn main() -> Result<(), ExitFailure> {
         .with_context(|_| format!("could not read file `{}`", path))?;
     println!("file content: {}", content);
     Ok(())
+}*/
+
+
+/* Progress bar */
+
+use indicatif::ProgressBar;
+
+fn main() {
+    let pb = ProgressBar::new(100);
+    for i in 0..100 {
+        //do_hard_work();
+        pb.println(format!("[+] finished #{}", i));
+        pb.inc(1);
+    }
+    pb.finish_with_message("done");
+
 }
 
 // Let's try it! 
