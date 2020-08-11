@@ -1,3 +1,4 @@
+/*
 use structopt::StructOpt;
 
 /// Search for a pattern in a file and display the lines that contain it.
@@ -19,6 +20,18 @@ fn main() {
             println!("{}", line);
         }
     }
+}
+*/
+
+use failure::ResultExt;
+use exitfailure::ExitFailure;
+
+fn main() -> Result<(), ExitFailure> {
+    let path = "src/test.txt";
+    let content = std::fs::read_to_string(path)
+        .with_context(|_| format!("could not read file `{}`", path))?;
+    println!("file content: {}", content);
+    Ok(())
 }
 
 // Let's try it! 
