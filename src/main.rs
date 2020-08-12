@@ -39,7 +39,7 @@ fn main() -> Result<(), ExitFailure> {
 
 
 /* Progress bar */
-
+/*
 use indicatif::ProgressBar;
 
 fn main() {
@@ -51,6 +51,15 @@ fn main() {
     }
     pb.finish_with_message("done");
 
+}
+*/
+
+use log::{info, warn};
+
+fn main() {
+    //env_logger::init();
+    info!("starting up");
+    warn!("oops, nothing implemented!");
 }
 
 // Let's try it! 
