@@ -2,7 +2,13 @@
 name = "grrs"
 version = "0.1.0"
 authors = ["Ryohei Suzuki <ryh.szk.cmnty@gmail.com>"]
+description = "A tool to search files"
 edition = "2018"
+homepage = "https://github.com/ryhszk/cmdline-app"
+repository = "https://github.com/ryhszk/cmdline-app"
+keywords = ["cli", "search", "demo"]
+categories = ["command-line-utilities"]
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
